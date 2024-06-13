@@ -1,0 +1,302 @@
+@charset "UTF-8";
+/* 書籍管理システムWeb版Ver2.0のCSS */
+
+/* -------------------- common -------------------- */
+body {
+	font-family: sans-serif;
+}
+
+.wrapper {
+	max-width: 1230px;
+	width: calc(100% - 10px);
+	margin: 0 auto;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0.6rem auto;
+}
+
+main {
+	text-align: center;
+	min-height: 70vh;
+	padding-bottom: 30px;
+}
+/* title */
+h2 {
+	text-transform: uppercase;
+	margin: 0.8rem auto;
+	font-size: 1.4rem;
+}
+
+.h2Border {
+	position: relative;
+}
+
+.h2Border::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 1.8px;
+	background-color: #000;
+	margin: 0 auto 50px;
+}
+
+nav {
+	position: absolute;
+	top: -0.25rem;
+	left: 3rem;
+}
+
+.nav {
+	display: flex;
+	margin-left: -30px;
+}
+
+.nav li {
+	margin-right: 1rem;
+}
+
+table {
+	margin: 15px auto;
+}
+
+th {
+	background-color: #66f;
+	padding-top: 4px;
+}
+
+.detail-table th, .insert-table th, .update-table th,
+ .login-table th, .insertIntoCart-table th {
+	text-align: left;
+	padding-left: 0.5em;
+	min-width: 7em;
+}
+
+input[type="text"], input[type="submit"] {
+	margin: 2px 0.5em 2px 0;
+}
+
+.btn {
+	display: flex;
+	justify-content: center;
+	gap: 4em;
+}
+
+.message {
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+.total span:first-child {
+	background-color: #66f;
+	display: inline-block;
+	font-weight: bold;
+	padding: 1px 3em 0;
+}
+.total span:last-child {
+	display: inline-block;
+	background-color: transparent;
+	padding-left: 1em;
+}
+
+.total {
+	border-top: 3px double #000;
+	padding-top: 10px;
+}
+
+.br {
+	display: block;
+}
+
+/* -------------------- header, footer -------------------- */
+h1 {
+	margin-top: 1.5rem;
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+header::after, footer::before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 5px;
+	background-color: #00f;
+	margin: 0 auto;
+}
+
+.copyright {
+	margin: 1em auto;
+}
+
+
+/* -------------------- list/error -------------------- */
+.list .h2Border::after, .error .h2Border::after {
+	margin-bottom: 0;
+}
+
+.list-form {
+	margin: 5px auto;
+	display: inline-block;
+}
+.list-form span {
+	display: inline-block;
+}
+
+.list-table {
+	width: calc(90% - 20px);
+	text-align: center;
+}
+
+.list-table td:nth-child(4) {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.update-link {
+	display: inline-block;
+}
+
+/* -------------------- detail -------------------- */
+.detail-table td {
+	min-width: 10em;
+	background-color: #6ff;
+	padding-left: 0.5em;
+}
+
+/* -------------------- insert -------------------- */
+.insert-form input[type="text"] {
+	width: 100%;
+	padding: 2px;
+}
+
+.insert-table {
+	margin: 15px auto;
+	padding: 0 20px;
+}
+
+.insert-table td {
+	min-width: 15em;
+}
+
+/* -------------------- update --------------------- */
+.update-form input[type="text"] {
+	width: 100%;
+	padding: 2px;
+}
+
+.update-table {
+	margin: 15px auto;
+	padding: 0 20px;
+}
+
+.update-table .center {
+	text-align: center;
+}
+
+.update-table .transparent {
+	background-color: transparent;
+}
+
+.update-table td {
+	min-width: 10em;
+	padding-left: 0.5em;
+}
+
+.td-highlight {
+	background-color: #6ff;
+}
+
+
+
+/* -------------------- login --------------------- */
+.login {
+	margin-top: 49.6px;
+}
+
+/* -------------------- menu --------------------- */
+.menu-title {
+	position: relative;
+}
+
+.menu-user {
+	position: absolute;
+	text-align: left;
+	top: -15px;
+	right: 1.5em;
+}
+
+.menu-list {
+	padding-left: 35vw;
+}
+
+.menu-list li {
+	text-align: left;
+	margin-bottom: 30px;
+}
+.menu-list li:last-child {
+	margin: 70px 0 0;
+}
+
+/* -------------------- insertIntoCart --------------------- */
+.insertIntoCart-table td {
+	min-width: 10em;
+	padding-left: 0.5em;
+}
+
+.insertIntoCart-form {
+	margin-top: 30px;
+}
+
+/* -------------------- showCart --------------------- */
+.showCart-table, .buyConfirm-table, .insertIniData-table {
+	width: 100%;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.showCart {
+	position: relative;
+}
+.showCart-form {
+	position: absolute;
+	bottom: 7%;
+	right: 20%;;
+}
+.showCart-form input[type="submit"] {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+/* -------------------- buyConfirm --------------------- */
+.buyConfirm .h2Border::after {
+	margin-bottom: 0;
+}
+
+.buyConfirm-contents {
+	text-align: left;
+	padding-left:10vw;
+	padding-right: 15vw;
+}
+
+.buyConfirm .total span:first-child {
+	margin-left: 25vw;
+}
+
+/* -------------------- showOrderedItem --------------------- */
+.showOrderedItem-table {
+	min-width: 70%;
+	text-align: center;
+}
+
+/* -------------------- insertIniData --------------------- */
+.insertIniData-contents {
+	text-align: left;
+	padding-left:10vw;
+	padding-right: 10vw;
+}
